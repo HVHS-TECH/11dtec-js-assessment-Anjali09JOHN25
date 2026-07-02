@@ -16,6 +16,8 @@ let currentItem ="";
 /****************************
 Functions
 ****************************/
+
+
 function showForm(itemName) {
     console.log ("Clicked", itemName);
     currentItem = itemName;
