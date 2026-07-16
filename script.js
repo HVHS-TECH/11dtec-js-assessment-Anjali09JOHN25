@@ -58,7 +58,7 @@ openCustomForm(menu[i]);
 });
 
 
-menuContainer.appencChild(coffeeCard);
+menuContainer.appendChild(coffeeCard);
    
 }
 }
