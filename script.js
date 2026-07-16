@@ -44,6 +44,8 @@ const milk = document.getElementById("milk");
 const temperature = document.getElementById("temperature");
 const size = document.getElementById("size");
 const totalPrice = document.getElementById("totalPrice");
+const totalPrice = document.getElementById("totalPrice");
+
 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
