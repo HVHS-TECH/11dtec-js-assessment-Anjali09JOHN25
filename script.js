@@ -1,38 +1,35 @@
-/****************************
-Console log
-****************************/
+//Coffee menu stored in an array 
 
-console.log("Hello world!")
+const menu =[
+    {
+        name:"Latte",
+        price: 5.50
+    }
+    {
+        name:"Flat White",
+        price: 5.00 
+    }
+     {
+        name:"Cappucino",
+        price: 5.50 
+    }
+     {
+        name:"Mocha",
+        price: 6.00 
+    }
+     {
+        name:"Espresso",
+        price: 4.00 
+    }
+];
 
-// Variables
+//variables that change
+let cart =[];
+let selectedCoffee = null;
+let customerName ="";
+let total = 0;
 
-/****************************
-Main Code
-****************************/
-let currentItem ="";
+//html elements
 
+const menuContainer 
 
-
-/****************************
-Functions
-****************************/
-
-
-function showForm(itemName) {
-    console.log ("Clicked", itemName);
-    currentItem = itemName;
-
-    document.gotElementById("selectedItem").textContent = itemName;
-    document.gotElementById("orderForm").style.displau ="block";
-}
-
-function submitOrder(){
-    console.log ("Submitted");
-    let quantity = document.getElementbyId("quantity").value;
-
-    alert(
-       'Order Submitted!
-       Item:${currentItem}
-Quantity:${quantity}'
-);
-}
