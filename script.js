@@ -35,7 +35,7 @@ const menuContainer = document.getElementById("menuContainer");
 const cartItems = document.getElementById("cartItems");
 const nameForm = document.getElementById("nameForm");
 const startButton = document.getElementById("startButton");
-const customerInput = document.getElementById("customerInput");
+const customerInput = document.getElementById("customerName");
 
 function displayMenu(){
     for(let i = 0; i < menu.length; i++){
