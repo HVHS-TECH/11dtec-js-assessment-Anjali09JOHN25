@@ -4,19 +4,19 @@ const menu =[
     {
         name:"Latte",
         price: 5.50
-    }
+    },
     {
         name:"Flat White",
         price: 5.00 
-    }
+    },
      {
         name:"Cappucino",
         price: 5.50 
-    }
+    },
      {
         name:"Mocha",
         price: 6.00 
-    }
+    },
      {
         name:"Espresso",
         price: 4.00 
