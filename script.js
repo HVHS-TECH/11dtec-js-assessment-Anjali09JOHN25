@@ -45,10 +45,7 @@ function displayMenu(){
         coffeeCard.innerHTML = `
         <h3>${menu[i].name</h3>
         <p>$${menu[i].price.toFixed(2)}</p>
-
-        <button>
-            Customise
-        </button>
+<button>Customise</button>
         `;
 
         const button =coffeeCard.querySelector("button");
