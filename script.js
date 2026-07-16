@@ -77,6 +77,8 @@ menuContainer.appendChild(coffeeCard);
 }
 
 function openCustomForm(coffee){
+    alert("Button works!");
+   
     selectedCoffee = coffee;
     coffeeTitle.textContent = coffee.name;
     coffeeForm.style.display = "block";
