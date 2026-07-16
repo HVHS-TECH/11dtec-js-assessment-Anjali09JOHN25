@@ -1,17 +1,67 @@
+/* Page styling */ 
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4ede4;
+}
+
+header{
+    background:#6F4E37;
+    color:white;
+    text-align: center;
+    padding:20px;
+}
+
+
+/* Main layout */ 
+.container{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.menu{
+    background:white;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.cart{
+    background:white;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgba (0,0,0,0.2);
+}
+
 /* Coffee Cards */ 
 
 #menuContainer{
-    display:flex;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minimax(180px, 1fr));
     gap:20px;
 }
 
 .coffeeCard{
-    width:180px;
-    background:white;
+    background: #fffaff;
+    border:2px solid #d8c3a5;
     border-radius: 10px;
     padding:15px;
     text-align:center;
-    cursor:pointer;
     box-shadow:0 0 8px
+transition: 0.3;
+}
+
+.coffeeCard:hover{
+    background: #6F4E37;
+    color:white;
+    border:none;
+    border-radius:5px;
+    padding:10px;
+    cursor:pointer;
+}
+
+.coffeeCard button:hover{
+    background: #4b3324
 }
