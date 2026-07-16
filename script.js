@@ -37,6 +37,16 @@ const nameForm = document.getElementById("nameForm");
 const startButton = document.getElementById("startButton");
 const customerInput = document.getElementById("customerName");
 
+startButton.addEvebtListener("click", function() {
+    customerName = customerInput.value;
+    if (customerName === ""){
+        alert("Please enter your name.");
+ }  else{
+    nameForm.style.display = "none";
+    displayMenu ();
+}
+});
+
 function displayMenu(){
     for(let i = 0; i < menu.length; i++){
         const coffeeCard = document.createElement("div");
