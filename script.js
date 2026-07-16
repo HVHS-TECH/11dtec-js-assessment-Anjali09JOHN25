@@ -95,6 +95,41 @@ cancelButton.addEventListener("click", function(){
 addCartButton.addEventListener("click", function (){
 
     const order ={
-        name
+        name: selectedCoffee.name,
+        milk: milk.value,
+        temperature: temperature.value,
+        size: size.options[size.selectedIndex].text,
+        price: finalPrice
+    };
+
+    cart.push(order);
+    updateCart();
+    coffeeForm.style.display = "none";
+});
+
+function updateCart(){
+    cartItems.innerHTML ="";
+    total = 0;
+
+    for(let i = 0; i < cart.length; i++){
+        const item = document.createElement("p");
+
+        item.textContent = 
+        cart[i].name +
+        " | " +
+        cart[i].milk +
+        " | " +
+        cart[i].temperature +
+        " | " +
+        cart[i].size +
+        " -$" +
+        cart[i].price.toFixed(2);
+
+        cartItems.appendChild(item);
+        total += cart[i].price;
+        
     }
-})
+
+totalPrice.textContent = "Total: $" + total.toFixed(2);
+}
+
