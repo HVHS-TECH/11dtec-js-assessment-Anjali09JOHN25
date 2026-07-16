@@ -81,7 +81,7 @@ function openCustomForm(coffee){
    
     selectedCoffee = coffee;
     coffeeTitle.textContent = coffee.name;
-    coffeeForm.style.display = "block";
+    coffeeForm.style.display = "flex";
 }
 
 cancelButton.addEventListener("click", function(){
