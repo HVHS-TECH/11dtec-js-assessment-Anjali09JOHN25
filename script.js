@@ -36,6 +36,10 @@ const cartItems = document.getElementById("cartItems");
 const nameForm = document.getElementById("nameForm");
 const startButton = document.getElementById("startButton");
 const customerInput = document.getElementById("customerName");
+const coffeeForm = document.getElementById("coffeeForm");
+const coffeeTitle = document.getElementById("coffeeTitle");
+const cancelButton = document.getElementById("cancelButton");
+const addCartButton = document.getElementById("addCartButton");
 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
@@ -72,3 +76,5 @@ menuContainer.appendChild(coffeeCard);
    
 }
 }
+
+function openCustomForm()
