@@ -44,7 +44,13 @@ const milk = document.getElementById("milk");
 const temperature = document.getElementById("temperature");
 const size = document.getElementById("size");
 const totalPrice = document.getElementById("totalPrice");
-const totalPrice = document.getElementById("totalPrice");
+const placeOrderButton = document.getElementById("placeOrderButton");
+const paymentForm = document.getElementById("paymentForm");
+const moneyGiven = document.getElementById("moneyGiven");
+const confirmOrderButton = document.getElementById("confirmOrderButton");
+const receiptForm = document.getElementById("receiptForm");
+const receiptText = document.getElementById("receiptText");
+const closeReceipt = document.getElementById("closeReceipt");
 
 
 startButton.addEventListener("click", function() {
@@ -137,3 +143,10 @@ function updateCart(){
 totalPrice.textContent = "Total: $" + total.toFixed(2);
 }
 
+placeOrderButton.addEventListener("click", function(){
+    if(cart.length === 0){
+        alert("Your cart is empty. Please add items to your cart before placing an order.");
+    } else{
+        paymentForm.style.display = "flex";
+    }
+});
