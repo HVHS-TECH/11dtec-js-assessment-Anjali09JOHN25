@@ -94,6 +94,8 @@ cancelButton.addEventListener("click", function(){
 
 addCartButton.addEventListener("click", function (){
 
+    const finalPrice = selectedCoffee.price + Number(size.value);
+    
     const order ={
         name: selectedCoffee.name,
         milk: milk.value,
