@@ -31,5 +31,8 @@ let total = 0;
 
 //html elements
 
-const menuContainer 
-
+const menuContainer = document.getElementById("menuContainer");
+const cartItems = document.getElementById("cartItems");
+const nameForm = document.getElementById("nameForm");
+const startButton = document.getElementById("startButton");
+const customerInput = document.getElementById("customerInput");
