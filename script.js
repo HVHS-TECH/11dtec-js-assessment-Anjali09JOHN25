@@ -150,3 +150,37 @@ placeOrderButton.addEventListener("click", function(){
         paymentForm.style.display = "flex";
     }
 });
+
+confirmOrderButton.addEventListener("click", function(){
+    const money = Number(moneyGiven.value);
+    if(money < total){
+        alert("Insufficient funds. Please provide enough money to cover the total cost.");
+    } else{
+        const change = money - total;
+         showReceipt(money, change);
+        paymentForm.style.display = "none";
+        receiptForm.style.display = "flex";
+    
+        function showReceipt(money, change){
+            let receipt = "";
+            receipt += "Customer: " + customerName + "<br><br>";
+            receipt += "Items Ordered:<br>";
+            for(let i = 0; i < cart.length; i++){
+                receipt += 
+                cart[i].name + 
+                " | " + 
+                cart[i].milk +
+                 " | " + 
+                 cart[i].temperature + 
+                 " | " + 
+                 cart[i].price.toFixed(2) + 
+                 "<br>";
+            }
+    
+            receipt += "<br>Total: $" + total.toFixed(2) + "<br>";
+            receipt += "Money Given: $" + money.toFixed(2) + "<br>";
+            receipt += "Change: $" + change.toFixed(2) + "<br>";
+    
+            receiptText.innerHTML = receipt;
+        }
+    }
