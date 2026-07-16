@@ -183,4 +183,7 @@ confirmOrderButton.addEventListener("click", function(){
     
             receiptText.innerHTML = receipt;
         }
-    }
+    closeReceipt.addEventListener("click", function(){
+        receiptForm.style.display = "none";
+
+    });
