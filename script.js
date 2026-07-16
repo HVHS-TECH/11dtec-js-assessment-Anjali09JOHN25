@@ -39,6 +39,11 @@ const customerInput = document.getElementById("customerName");
 const coffeeForm = document.getElementById("coffeeForm");
 const coffeeTitle = document.getElementById("coffeeTitle");
 const cancelButton = document.getElementById("cancelButton");
+const addCartButton = document.getElementById("addCartButton");
+const milk = document.getElementById("milk");
+const temperature = document.getElementById("temperature");
+const size = document.getElementById("size");
+const totalPrice = document.getElementById("totalPrice");
 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
@@ -86,3 +91,10 @@ function openCustomForm(coffee){
 cancelButton.addEventListener("click", function(){
     coffeeForm.style.display = "none";
 });
+
+addCartButton.addEventListener("click", function (){
+
+    const order ={
+        name
+    }
+})
