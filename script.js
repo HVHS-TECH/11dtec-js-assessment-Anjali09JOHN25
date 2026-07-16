@@ -39,7 +39,6 @@ const customerInput = document.getElementById("customerName");
 const coffeeForm = document.getElementById("coffeeForm");
 const coffeeTitle = document.getElementById("coffeeTitle");
 const cancelButton = document.getElementById("cancelButton");
-const addCartButton = document.getElementById("addCartButton");
 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
