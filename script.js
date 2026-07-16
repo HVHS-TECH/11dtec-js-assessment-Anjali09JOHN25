@@ -77,4 +77,12 @@ menuContainer.appendChild(coffeeCard);
 }
 }
 
-function openCustomForm()
+function openCustomForm(coffee){
+    selectedCoffee = coffee;
+    coffeeTitle.textContent = coffee.name;
+    coffeeForm.style.display = "block";
+}
+
+cancelButton.addEventListener("click", function(){
+    coffeeForm.style.display = "none";
+});
