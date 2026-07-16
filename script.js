@@ -38,7 +38,7 @@ const startButton = document.getElementById("startButton");
 const customerInput = document.getElementById("customerInput");
 
 function displayMenu(){
-    for(let 0; i < menu.length; i++){
+    for(let i = 0; i < menu.length; i++){
         const coffeeCard = document.createElement("div");
         coffeeCard.className = "coffeeCard";
 
