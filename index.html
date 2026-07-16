@@ -11,8 +11,9 @@
 
 <h1>Cafe Menu</h1>
 
-<div id ="namePopup" class ="popup">
-  <div class = "popup-content">
+<!--Customer name form-->
+<div id ="nameForm" class ="form">
+  <div class = "form-content">
 <h2>Welcome to cafe name</h2>
 <label>Enter your name:</label>
 <input type ="text" id="customerName" placeholder="Your name">
@@ -20,32 +21,28 @@
 <button id ="startButton">Start Ordering</button>
   </div>
 </div>
-<button class = "addclass"
-<button onclick="showForm('Latte')"><img src ="Latte.coffee-modified.png"></button>
-<button onclick="showForm('Mocha')"><img src ="mocha.coffee-modified.png"></button>
-<button onclick="showForm('Flat white')"><img src ="flatwhite.coffee-modified.png"></button>
-<button onclick="showForm('Espresso')"><img src ="Espresso.coffee-modified.png"></button>
-<button onclick="showForm('Americano')"><img src ="Americano.coffee-modified.png"></button>
-<button onclick="showForm('cappucino')"><img src ="cappucino.coffee-modified.png"></button>
+
+<!--Coffee customization form-->
+<div id = "coffeeForm" class ="form">
+  <div class = "form-content">
+    <h2 id ="coffeeTitle">Coffee</h2>
+    
+    <label for ="milk">Milk</label>
+    <select id ="milk">
+    <option>Full Cream</option> 
+     <option>Full Cream</option> 
+    <option>Trim</option> 
+    <option>Oat</option> 
+    <option>Almond</option> 
+    <option>Soy</option> 
+    </select>
+
+    <label for ="temperature">Temperature</label>
+    <select id ="temperature">
+    <option>Hot</option> 
+    <option>Iced</option> 
+    </select>
+
+
+  </div>
 </div>
-
-<div id="orderForm">
-  <h2>Order Form</h2>
-  <p>Item: <span id="selectedItem"></span>
-  </p>
-
-  <label>Quantity</label>
-  <input type="number" id="quantity" value="1">
-
-  <br><br>
-  <button onclick ="submitOrder()">
-    Submit Order
-  </button>"
-</div>
-
-<script scr="script.js"></script>
-
-</body>
-</html>
-
-
