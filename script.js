@@ -10,7 +10,7 @@ const menu =[
         price: 5.00 
     },
      {
-        name:"Cappucino",
+        name:"Cappuccino",
         price: 5.50 
     },
      {
@@ -35,7 +35,7 @@ const menu =[
     },
     {
         name:"Chai Latte",
-        price: 6.00 
+        price: 5.50
     },
     {
         name:"Macchiato",
@@ -43,7 +43,7 @@ const menu =[
     },
     {
         name:"Long Black",
-        price: 5.50 
+        price: 4.50 
     }
 ];
 
