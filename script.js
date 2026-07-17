@@ -20,6 +20,30 @@ const menu =[
      {
         name:"Espresso",
         price: 4.00 
+    },
+    {
+        name:"Americano",
+        price: 5.00 
+    },
+    {
+        name:"Hot Chocolate",
+        price: 5.50 
+    },
+    {
+        name:"Matcha Latte",
+        price: 5.50 
+    },
+    {
+        name:"Chai Latte",
+        price: 5.50 
+    },
+    {
+        name:"Macchiato",
+        price: 5.50 
+    },
+    {
+        name:"Long Black",
+        price: 5.50 
     }
 ];
 
