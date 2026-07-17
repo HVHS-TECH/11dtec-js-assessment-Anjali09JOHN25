@@ -166,8 +166,8 @@ confirmOrderButton.addEventListener("click", function(){
     
         function showReceipt(money, change){
             let receipt = "";
-            receipt += "Customer: " + customerName + "<br><br>";
-            receipt += "Items Ordered:<br>";
+            receipt += "<strong>Customer:</strong> " + customerName + "<br><br>";
+            receipt += "<strong>Items Ordered:</strong><br>";
             for(let i = 0; i < cart.length; i++){
                 receipt += 
                 cart[i].name + 
@@ -180,13 +180,19 @@ confirmOrderButton.addEventListener("click", function(){
                  "<br>";
             }
     
-            receipt += "<br>Total: $" + total.toFixed(2) + "<br>";
-            receipt += "Money Given: $" + money.toFixed(2) + "<br>";
-            receipt += "Change: $" + change.toFixed(2) + "<br>";
+            receipt += "<br><strong>Total:</strong> $" + total.toFixed(2) + "<br>";
+            receipt += "<strong>Money Given:</strong> $" + money.toFixed(2) + "<br>";
+            receipt += "<strong>Change:</strong> $" + change.toFixed(2) + "<br>";
     
             receiptText.innerHTML = receipt;
         }
-    closeReceipt.addEventListener("click", function(){
+   
+        closeReceipt.addEventListener("click", function(){
         receiptForm.style.display = "none";
+        cart = [];
+        total = 0;
+        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        totalPrice.textContent = "Total: $0.00";
+        moneyGiven.value = "";
 
       });
