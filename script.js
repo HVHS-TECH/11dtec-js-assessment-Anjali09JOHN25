@@ -79,6 +79,7 @@ const paymentMessage = document.getElementById("paymentMessage");
 const nameMessage = document.getElementById("nameMessage");
 const cartMessage = document.getElementById("cartMessage");
 const syrup = document.getElementById("syrup");
+const cancelPaymentButton = document.getElementById("cancelPaymentButton");
 
 
 startButton.addEventListener("click", function() {
@@ -237,4 +238,10 @@ confirmOrderButton.addEventListener("click", function(){
         totalPrice.textContent = "Total: $0.00";
         moneyGiven.value = "";
 
+      });
+
+      cancelPaymentButton.addEventListener("click", function(){
+        paymentForm.style.display = "none";
+        paymentMessage.textContent = "";
+        moneyGiven.value = "";
       });
