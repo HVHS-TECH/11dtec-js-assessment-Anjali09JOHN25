@@ -85,7 +85,7 @@ const backtoCartButton = document.getElementById("backtoCartButton");
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
     if (customerName === ""){
-        nameMessage.textContent = "Please enter your name.";
+        nameMessage.textContent = "Name is required. Please enter your name.";
         nameMessage.style.color = "red";
  }  else{
     nameMessage.textContent = "";
