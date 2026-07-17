@@ -51,6 +51,7 @@ const confirmOrderButton = document.getElementById("confirmOrderButton");
 const receiptForm = document.getElementById("receiptForm");
 const receiptText = document.getElementById("receiptText");
 const closeReceipt = document.getElementById("closeReceipt");
+const paymentMessage = document.getElementById("paymentMessage");
 
 
 startButton.addEventListener("click", function() {
