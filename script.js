@@ -154,13 +154,15 @@ placeOrderButton.addEventListener("click", function(){
 confirmOrderButton.addEventListener("click", function(){
     const money = Number(moneyGiven.value);
     if(money < total){
-        alert("Insufficient funds. Please provide enough money to cover the total cost.");
-    } else{
+        alert("Insufficient funds. Please provide enough money.");
+    }else{
         const change = money - total;
          showReceipt(money, change);
         paymentForm.style.display = "none";
         receiptForm.style.display = "flex";
-    };
+    }
+
+});
     
         function showReceipt(money, change){
             let receipt = "";
