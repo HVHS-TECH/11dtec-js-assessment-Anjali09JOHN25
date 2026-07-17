@@ -52,13 +52,16 @@ const receiptForm = document.getElementById("receiptForm");
 const receiptText = document.getElementById("receiptText");
 const closeReceipt = document.getElementById("closeReceipt");
 const paymentMessage = document.getElementById("paymentMessage");
+const nameMessage = document.getElementById("nameMessage");
 
 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
     if (customerName === ""){
-        alert("Please enter your name.");
+        nameMessage.textContent = "Please enter your name.";
+        nameMessage.style.color = "red";
  }  else{
+    nameMessage.textContent = "";
     nameForm.style.display = "none";
     displayMenu ();
 }
@@ -159,7 +162,7 @@ confirmOrderButton.addEventListener("click", function(){
         paymentMessage.style.color = "red";
     }else{ 
         paymentMessage.textContent = "";
-        
+
         const change = money - total;
          showReceipt(money, change);
         paymentForm.style.display = "none";
