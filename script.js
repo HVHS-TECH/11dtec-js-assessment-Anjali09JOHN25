@@ -78,6 +78,7 @@ const closeReceipt = document.getElementById("closeReceipt");
 const paymentMessage = document.getElementById("paymentMessage");
 const nameMessage = document.getElementById("nameMessage");
 const cartMessage = document.getElementById("cartMessage");
+const syrup = document.getElementById("syrup");
 
 
 startButton.addEventListener("click", function() {
