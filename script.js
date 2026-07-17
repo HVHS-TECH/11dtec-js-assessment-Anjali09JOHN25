@@ -155,7 +155,10 @@ placeOrderButton.addEventListener("click", function(){
 confirmOrderButton.addEventListener("click", function(){
     const money = Number(moneyGiven.value);
     if(money < total){
-        alert("Insufficient funds. Please provide enough money.");
+        paymentMessage.textContent = "Not enough money. Please enter a larger amount.";
+        paymentMessage.style.color = "red";
+        paymentMessage.textContent = "";
+
     }else{
         const change = money - total;
          showReceipt(money, change);
