@@ -31,11 +31,11 @@ const menu =[
     },
     {
         name:"Matcha Latte",
-        price: 5.50 
+        price: 6.00 
     },
     {
         name:"Chai Latte",
-        price: 5.50 
+        price: 6.00 
     },
     {
         name:"Macchiato",
