@@ -79,7 +79,7 @@ const paymentMessage = document.getElementById("paymentMessage");
 const nameMessage = document.getElementById("nameMessage");
 const cartMessage = document.getElementById("cartMessage");
 const syrup = document.getElementById("syrup");
-const cancelPaymentButton = document.getElementById("cancelPaymentButton");
+const backtoCartButton = document.getElementById("backtoCartButton");
 
 
 startButton.addEventListener("click", function() {
@@ -240,7 +240,7 @@ confirmOrderButton.addEventListener("click", function(){
 
       });
 
-      cancelPaymentButton.addEventListener("click", function(){
+      backtoCartButton.addEventListener("click", function(){
         paymentForm.style.display = "none";
         paymentMessage.textContent = "";
         moneyGiven.value = "";
