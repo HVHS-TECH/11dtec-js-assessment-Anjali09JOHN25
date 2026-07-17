@@ -53,6 +53,7 @@ const receiptText = document.getElementById("receiptText");
 const closeReceipt = document.getElementById("closeReceipt");
 const paymentMessage = document.getElementById("paymentMessage");
 const nameMessage = document.getElementById("nameMessage");
+const cartMessage = document.getElementById("cartMessage");
 
 
 startButton.addEventListener("click", function() {
@@ -149,8 +150,10 @@ totalPrice.textContent = "Total: $" + total.toFixed(2);
 
 placeOrderButton.addEventListener("click", function(){
     if(cart.length === 0){
-        alert("Your cart is empty. Please add items to your cart before placing an order.");
+        cartMessage.textContent = "Your cart is empty. Please add items to your cart before placing an order.";
+        cartMessage.style.color = "red";
     } else{
+        cartMessage.textContent = "";
         paymentForm.style.display = "flex";
     }
 });

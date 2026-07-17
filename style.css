@@ -99,7 +99,9 @@ transition: 0.3;
     box-sizing: border-box;
 }
 
-#paymentMessage{
+#paymentMessage,
+#nameMessage,
+#cartMessage{
     color: red;
     font-weight:bold;
     text-align:center;
