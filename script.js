@@ -160,6 +160,7 @@ confirmOrderButton.addEventListener("click", function(){
          showReceipt(money, change);
         paymentForm.style.display = "none";
         receiptForm.style.display = "flex";
+    });
     
         function showReceipt(money, change){
             let receipt = "";
