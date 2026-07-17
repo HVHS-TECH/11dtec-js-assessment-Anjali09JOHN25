@@ -132,12 +132,13 @@ cancelButton.addEventListener("click", function(){
 
 addCartButton.addEventListener("click", function (){
 
-    const finalPrice = selectedCoffee.price + Number(size.value);
+    const finalPrice = selectedCoffee.price + Number(size.value) + Number(syrup.value);
     
     const order ={
         name: selectedCoffee.name,
         milk: milk.value,
         temperature: temperature.value,
+        syrup: syrup.options[syrup.selectedIndex].text,
         size: size.options[size.selectedIndex].text,
         price: finalPrice
     };
@@ -160,6 +161,8 @@ function updateCart(){
         cart[i].milk +
         " | " +
         cart[i].temperature +
+        " | " +
+        cart[i].syrup +
         " | " +
         cart[i].size +
         " -$" +
@@ -211,6 +214,10 @@ confirmOrderButton.addEventListener("click", function(){
                  " | " + 
                  cart[i].temperature + 
                  " | " + 
+                 cart[i].syrup +
+                 " | " + 
+                 cart[i].size + 
+                 " - $" +
                  cart[i].price.toFixed(2) + 
                  "<br>";
             }
