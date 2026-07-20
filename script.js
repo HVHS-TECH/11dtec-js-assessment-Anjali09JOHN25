@@ -152,6 +152,7 @@ function displayMenu(){
         <button class = "minusButton">-</button>
         <button class = "plusButton">+</button>
         </div>
+        
 <button>Customise</button>
         </div>
         `;
