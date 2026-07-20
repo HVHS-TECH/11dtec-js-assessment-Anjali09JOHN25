@@ -147,16 +147,20 @@ function displayMenu(){
     });
 
     minusButton.addEventListener("click", function(){
-        for(let j = 0; j < cart.length; j++){
+       let removed = false;
+        for(let j = cart.length - 1; j >= 0; j--){
             if(cart[j].name === menu[i].name){
                 cart.splice(j, 1);
+                removed = true;
                 break;
             }
         }
 
+        if(removed){
         count--;
         quantity.textContent = count;
         updateCart();
+        }
     });
 
 menuContainer.appendChild(coffeeCard);
