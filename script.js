@@ -52,7 +52,7 @@ let cart =[];
 let selectedCoffee = null;
 let customerName ="";
 let total = 0;
-let count = 0;
+
 
 //html elements
 
@@ -121,6 +121,8 @@ function displayMenu(){
         const minusButton = coffeeCard.querySelector(".minusButton");
         const customiseButton = coffeeCard.querySelector(".customiseButton");
         const quantity = coffeeCard.querySelector(".quantity");
+
+        let count = 0;
 
         customiseButton.addEventListener("click", function(){
             openCustomForm(menu[i]);
