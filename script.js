@@ -142,10 +142,7 @@ function displayMenu(){
 
         count++;
         quantity.textContent = count;
-        if (count > 0){
-            count = --;
-            quantity.textContent = count;
-        }
+
         updateCart();
     });
 
@@ -156,6 +153,9 @@ function displayMenu(){
                 break;
             }
         }
+
+        count--;
+        quantity.textContent = count;
         updateCart();
     });
 
