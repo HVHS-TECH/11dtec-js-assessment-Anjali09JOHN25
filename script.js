@@ -115,7 +115,7 @@ function displayMenu(){
 
         const plusButton = coffeeCard.querySelector(".plusButton");
         const minusButton = coffeeCard.querySelector(".minusButton");
-        const customiseButton = coffeeCard.querySelector("button:last-of-type");
+        const customiseButton = coffeeCard.querySelector(".customiseButton");
 
         customiseButton.addEventListener("click", function(){
             openCustomForm(menu[i]);
@@ -127,7 +127,7 @@ function displayMenu(){
             milk: "Full Cream",
             temperature: "Hot",
             syrup: "None",
-            size: "Medium",
+            size: "Medium (+$0.50)",
             price: menu[i].price + 0.50
         };
 
@@ -147,6 +147,7 @@ function displayMenu(){
 
 menuContainer.appendChild(coffeeCard);
    
+  }
 }
 
 function openCustomForm(coffee){
