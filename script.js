@@ -4,46 +4,90 @@ const menu =[
     {
         name:"Latte",
         price: 5.50
+
+        -  + 
+        
+    [ Customise]
     },
     {
         name:"Flat White",
         price: 5.00 
+
+         -  + 
+        
+     [ Customise]
     },
      {
         name:"Cappuccino",
         price: 5.50 
+        
+        -  + 
+        
+     [ Customise]
     },
      {
         name:"Mocha",
         price: 6.00 
+        
+        -  + 
+        
+     [ Customise]
     },
      {
         name:"Espresso",
         price: 4.00 
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Americano",
         price: 5.00 
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Hot Chocolate",
         price: 5.50 
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Matcha Latte",
         price: 6.00 
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Chai Latte",
         price: 5.50
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Macchiato",
         price: 5.50 
+
+         -  + 
+        
+     [ Customise]
     },
     {
         name:"Long Black",
         price: 4.50 
+
+         -  + 
+        
+     [ Customise]
     }
 ];
 
@@ -103,6 +147,11 @@ function displayMenu(){
         <div>
         <h3>${menu[i].name}</h3>
         <p>$${menu[i].price.toFixed(2)}</p>
+
+        <div class="buttonRow">
+        <button class = "minusButton">-</button>
+        <button class = "plusButton">+</button>
+        </div>
 <button>Customise</button>
         </div>
         `;
