@@ -152,22 +152,44 @@ function displayMenu(){
         <button class = "minusButton">-</button>
         <button class = "plusButton">+</button>
         </div>
-        
+
 <button>Customise</button>
         </div>
         `;
 
-        const button =coffeeCard.querySelector("button");
+        const plusButton = coffeeCard.querySelector(".plusButton");
+        const minusButton = coffeeCard.querySelector(".minusButton");
+        const customiseButton = coffeeCard.querySelector("button:last-of-type");
 
-        button.addEventListener("click", function(){
-openCustomForm(menu[i]);
-       
-});
+        customiseButton.addEventListener("click", function(){
+            openCustomForm(menu[i]);
+        });
 
+        plusButton.addEventListener("click", function(){
+            name: menu[i].name,
+            milk: "Full Cream",
+            temperature: "Hot",
+            syrup: "None",
+            size: "Medium",
+            price: menu[i].price + 0.50
+        };
+
+        cart.push(order);
+        updateCart();
+    });
+
+    minusButton.addEventListener("click", function(){
+        for(let j = 0; j < cart.length; j++){
+            if(cart[j].name === menu[i].name){
+                cart.splice(j, 1);
+                break;
+            }
+        }
+        updateCart();
+    });
 
 menuContainer.appendChild(coffeeCard);
    
-}
 }
 
 function openCustomForm(coffee){
