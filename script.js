@@ -52,6 +52,7 @@ let cart =[];
 let selectedCoffee = null;
 let customerName ="";
 let total = 0;
+let count = 0;
 
 //html elements
 
@@ -106,6 +107,9 @@ function displayMenu(){
 
         <div class="buttonRow">
         <button class = "minusButton">-</button>
+
+        <span class = "quantity">0</span>
+
         <button class = "plusButton">+</button>
         </div>
 
@@ -116,6 +120,7 @@ function displayMenu(){
         const plusButton = coffeeCard.querySelector(".plusButton");
         const minusButton = coffeeCard.querySelector(".minusButton");
         const customiseButton = coffeeCard.querySelector(".customiseButton");
+        const quantity = coffeeCard.querySelector(".quantity");
 
         customiseButton.addEventListener("click", function(){
             openCustomForm(menu[i]);
@@ -132,6 +137,9 @@ function displayMenu(){
         };
 
         cart.push(order);
+
+        count++;
+        quantity.textContent = count;
         updateCart();
     });
 
