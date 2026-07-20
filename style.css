@@ -121,4 +121,31 @@ transition: 0.3;
 
 #cancelPaymentButton:hover{
     background: #666;
-}   
+}
+
+.buttonRow{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    margin: 10px 0;
+}
+
+.plusButton,.minusButton{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    font-size:20px;
+    cursor:pointer;
+    background: #6F4E37;
+    color:white;
+}
+
+.plusButton:hover,.minusButton:hover{
+    background: #4b3324;
+}
+
+.customiseButton{
+    width:100%;
+    margin-top:10px;
+}
