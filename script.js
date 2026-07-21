@@ -1,4 +1,4 @@
-//Coffee menu stored in an array 
+//Coffee menu stored in an array - doesn't need to be put into my html. Creates coffee cards with prices. 
 
 const menu =[
     {
@@ -54,8 +54,7 @@ let customerName ="";
 let total = 0;
 
 
-//html elements
-
+//html elements defined in const
 const menuContainer = document.getElementById("menuContainer");
 const cartItems = document.getElementById("cartItems");
 const nameForm = document.getElementById("nameForm");
@@ -82,7 +81,8 @@ const cartMessage = document.getElementById("cartMessage");
 const syrup = document.getElementById("syrup");
 const backtoCartButton = document.getElementById("backtoCartButton");
 
-
+//Start button code with an if statement, using variable customerName created earlier.
+//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
     if (customerName === ""){
@@ -95,6 +95,8 @@ startButton.addEventListener("click", function() {
 }
 });
 
+//Functiomn for displaying the coffee cards and using a for statement code the menu. 
+// Button code for the + and - buttons. - Used a tutorial need to reference
 function displayMenu(){
     for(let i = 0; i < menu.length; i++){
         const coffeeCard = document.createElement("div");
@@ -105,7 +107,7 @@ function displayMenu(){
         <h3>${menu[i].name}</h3>
         <p>$${menu[i].price.toFixed(2)}</p>
 
-        <div class="buttonRow">
+        <div class="buttonRow">                              
         <button class = "minusButton">-</button>
 
         <span class = "quantity">0</span>
@@ -117,17 +119,21 @@ function displayMenu(){
         </div>
         `;
 
+        //Defining buttons in the const
         const plusButton = coffeeCard.querySelector(".plusButton");
         const minusButton = coffeeCard.querySelector(".minusButton");
         const customiseButton = coffeeCard.querySelector(".customiseButton");
         const quantity = coffeeCard.querySelector(".quantity");
 
+        //Count variable 
         let count = 0;
 
+        //Cutomise button function so it opens the form for customization.
         customiseButton.addEventListener("click", function(){
             openCustomForm(menu[i]);
         });
 
+        //Plus button function so it adds a standard coffee without customization. 
         plusButton.addEventListener("click", function(){
             const order = {
             name: menu[i].name,
@@ -146,6 +152,8 @@ function displayMenu(){
         updateCart();
     });
 
+    //minus button code defined by variable removed. Makues sure that cart.length cannot go below -1
+    //Used tutorial - remember to reference.
     minusButton.addEventListener("click", function(){
        let removed = false;
         for(let j = cart.length - 1; j >= 0; j--){
@@ -168,6 +176,7 @@ menuContainer.appendChild(coffeeCard);
   }
 }
 
+//Custom coffee form created. Used variable values and determined final priced based on the values. 
 function openCustomForm(coffee){
    
     selectedCoffee = coffee;
@@ -179,6 +188,7 @@ cancelButton.addEventListener("click", function(){
     coffeeForm.style.display = "none";
 });
 
+//Add to cart code with an if statement, using variable customerName created earlier.
 addCartButton.addEventListener("click", function (){
 
     const finalPrice = selectedCoffee.price + Number(size.value) + Number(syrup.value);
@@ -197,6 +207,8 @@ addCartButton.addEventListener("click", function (){
     coffeeForm.style.display = "none";
 });
 
+//Letting more than 1 coffee be added to the cart and for that to update my total price. 
+//
 function updateCart(){
     cartItems.innerHTML ="";
     total = 0;
@@ -225,6 +237,8 @@ function updateCart(){
 totalPrice.textContent = "Total: $" + total.toFixed(2);
 }
 
+//Place order code with an if statement, using variable customerName created earlier.
+//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
 placeOrderButton.addEventListener("click", function(){
     if(cart.length === 0){
         cartMessage.textContent = "Your cart is empty. Please add items to your cart before placing an order.";
@@ -235,6 +249,8 @@ placeOrderButton.addEventListener("click", function(){
     }
 });
 
+//Confirm order code with an if statement, using variable customerName created earlier.
+//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
 confirmOrderButton.addEventListener("click", function(){
     const money = Number(moneyGiven.value);
     if(money < total){
@@ -251,6 +267,7 @@ confirmOrderButton.addEventListener("click", function(){
 
 });
     
+//Receipt fuction to show order. Also calculates change based on money entered. Displays customer name and coffee that was ordered + any customizations
         function showReceipt(money, change){
             let receipt = "";
             receipt += "<strong>Customer:</strong> " + customerName + "<br><br>";
@@ -278,6 +295,7 @@ confirmOrderButton.addEventListener("click", function(){
             receiptText.innerHTML = receipt;
         }
    
+        //Close reciept button code 
         closeReceipt.addEventListener("click", function(){
         receiptForm.style.display = "none";
         cart = [];
@@ -288,6 +306,7 @@ confirmOrderButton.addEventListener("click", function(){
 
       });
 
+      //Back to cart button code 
       backtoCartButton.addEventListener("click", function(){
         paymentForm.style.display = "none";
         paymentMessage.textContent = "";

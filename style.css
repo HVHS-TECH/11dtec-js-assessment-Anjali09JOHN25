@@ -14,7 +14,7 @@ header{
 }
 
 
-/* Main layout */ 
+/* Main layout  and css grid */ 
 .container{
     display:grid;
     grid-template-columns: 2fr 1fr;
@@ -66,6 +66,7 @@ transition: 0.3;
     background: #4b3324;
 }
 
+/* Form styling */ 
 .form{
     display: none;
     position: fixed;
@@ -99,6 +100,7 @@ transition: 0.3;
     box-sizing: border-box;
 }
 
+/* Message - errors */ 
 #paymentMessage,
 #nameMessage,
 #cartMessage{
@@ -109,6 +111,7 @@ transition: 0.3;
     min-height: 20px;
 }
 
+/* Button styling */ 
 #cancelPaymentButton{
     background: #d9534f;
     color:white;
