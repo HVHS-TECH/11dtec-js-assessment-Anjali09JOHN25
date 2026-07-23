@@ -95,7 +95,7 @@ startButton.addEventListener("click", function() {
 }
 });
 
-//Functiomn for displaying the coffee cards and using a for statement code the menu. 
+//Functiomn for displaying the coffee cards and using a for statement code the menu - using a for loop. 
 // Button code for the + and - buttons. - Used a tutorial need to reference
 function displayMenu(){
     for(let i = 0; i < menu.length; i++){
@@ -119,7 +119,7 @@ function displayMenu(){
         </div>
         `;
 
-        //Defining buttons in the const
+        //Defining buttons - const
         const plusButton = coffeeCard.querySelector(".plusButton");
         const minusButton = coffeeCard.querySelector(".minusButton");
         const customiseButton = coffeeCard.querySelector(".customiseButton");
