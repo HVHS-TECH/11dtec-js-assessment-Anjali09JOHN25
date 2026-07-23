@@ -54,7 +54,7 @@ let customerName ="";
 let total = 0;
 
 
-//html elements defined in const
+//unchanging variables defined in const
 const menuContainer = document.getElementById("menuContainer");
 const cartItems = document.getElementById("cartItems");
 const nameForm = document.getElementById("nameForm");
