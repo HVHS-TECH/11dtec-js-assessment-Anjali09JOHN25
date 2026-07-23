@@ -81,8 +81,8 @@ const cartMessage = document.getElementById("cartMessage");
 const syrup = document.getElementById("syrup");
 const backtoCartButton = document.getElementById("backtoCartButton");
 
-//Start button code with an if statement, using variable customerName created earlier.
-//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
+/**Start button code with an if statement, using variable customerName created earlier.
+Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. ***/
 startButton.addEventListener("click", function() {
     customerName = customerInput.value;
     if (customerName === ""){
@@ -95,8 +95,8 @@ startButton.addEventListener("click", function() {
 }
 });
 
-//Functiomn for displaying the coffee cards and using a for statement code the menu - using a for loop. 
-// Button code for the + and - buttons. - Used a tutorial need to reference
+/***Functiomn for displaying the coffee cards and using a for statement code the menu - using a for loop. 
+Button code for the + and - buttons. - Used a tutorial need to reference ***/
 function displayMenu(){
     for(let i = 0; i < menu.length; i++){
         const coffeeCard = document.createElement("div");
@@ -152,8 +152,8 @@ function displayMenu(){
         updateCart();
     });
 
-    //minus button code defined by variable removed. Makues sure that cart.length cannot go below -1
-    //Used tutorial - remember to reference.
+    /***minus button code defined by variable removed. Makues sure that cart.length cannot go below -1
+    Used tutorial - remember to reference. ***/
     minusButton.addEventListener("click", function(){
        let removed = false;
         for(let j = cart.length - 1; j >= 0; j--){
@@ -208,7 +208,6 @@ addCartButton.addEventListener("click", function (){
 });
 
 //Letting more than 1 coffee be added to the cart and for that to update my total price. 
-//
 function updateCart(){
     cartItems.innerHTML ="";
     total = 0;
@@ -237,8 +236,8 @@ function updateCart(){
 totalPrice.textContent = "Total: $" + total.toFixed(2);
 }
 
-//Place order code with an if statement, using variable customerName created earlier.
-//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
+/***Place order code with an if statement, using variable customerName created earlier.
+Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic.***/
 placeOrderButton.addEventListener("click", function(){
     if(cart.length === 0){
         cartMessage.textContent = "Your cart is empty. Please add items to your cart before placing an order.";
@@ -249,8 +248,8 @@ placeOrderButton.addEventListener("click", function(){
     }
 });
 
-//Confirm order code with an if statement, using variable customerName created earlier.
-//Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. 
+/***Confirm order code with an if statement, using variable customerName created earlier.
+Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic. ***/
 confirmOrderButton.addEventListener("click", function(){
     const money = Number(moneyGiven.value);
     if(money < total){
@@ -267,7 +266,8 @@ confirmOrderButton.addEventListener("click", function(){
 
 });
     
-//Receipt fuction to show order. Also calculates change based on money entered. Displays customer name and coffee that was ordered + any customizations
+/***Receipt fuction to show order. Also calculates change based on money entered.
+ Displays customer name and coffee that was ordered + any customizations ***/
         function showReceipt(money, change){
             let receipt = "";
             receipt += "<strong>Customer:</strong> " + customerName + "<br><br>";
