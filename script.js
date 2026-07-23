@@ -237,7 +237,7 @@ totalPrice.textContent = "Total: $" + total.toFixed(2);
 }
 
 /***Place order code with an if statement, using variable customerName created earlier.
-Created a message defined within const so if user doesn't enter a name they get notified - usability heuristic.***/
+Created a message defined within const so if user tries to place order without any items in cart- usability heuristic.***/
 placeOrderButton.addEventListener("click", function(){
     if(cart.length === 0){
         cartMessage.textContent = "Your cart is empty. Please add items to your cart before placing an order.";
